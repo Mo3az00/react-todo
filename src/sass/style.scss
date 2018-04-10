@@ -7,3 +7,19 @@ body {
 .header {
   margin-bottom: 1rem;
 }
+
+.todo-item {
+  .custom-control-label {
+    display: block;
+
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.my-item {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}

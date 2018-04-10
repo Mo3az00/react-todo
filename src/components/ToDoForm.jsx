@@ -5,8 +5,12 @@ class ToDoForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.newItemText);
-    console.log(`Create new item ${this.newItemText.current.value}`);
+    const text = this.newItemText.current.value.trim();
+    this.props.addToDo(text);
+    event.currentTarget.reset();
+
+    // console.log(this.newItemText);
+    // console.log(`Create new item ${this.newItemText.current.value}`);
   };
 
   render() {
